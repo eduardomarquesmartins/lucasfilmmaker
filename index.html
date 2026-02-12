@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas FilmMaker</title>
+
+    <!-- SEO Básico -->
+    <meta name="description"
+        content="Cinema com alma para o seu casamento. Lucas FilmMaker captura a história da sua vida com um olhar real, sensível e cinematográfico.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/hero-animation.css"> -->
+
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg class="loader-ring" viewBox="0 0 100 100">
+                <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="ring-progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span class="loader-logo">LFM</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><i class="fa-solid fa-camera"></i> LucasFilmMaker</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#contact" class="btn-primary">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="hero-bg-video">
+                <source src="Casamentovideo1.mp4" type="video/mp4">
+            </video>
+
+            <!-- Overlay for contrast -->
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1 class="hero-title reveal-text">Mais que um vídeo,<br> a sua <em>História.</em></h1>
+                <p class="hero-subtitle reveal-text">Videomaker para casamentos e eventos.</p>
+                <a href="#portfolio" class="btn-outline reveal-text">Ver Portifólio</a>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span class="span-arrow"></span>
+                    <span class="span-arrow"></span>
+                    <span class="span-arrow"></span>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal-image">
+                        <img src="590979364_18543142789019175_490680403104594735_n.jpg" alt="Fotógrafo Profissional">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title reveal-text">Não é sobre câmeras, É sobre <em>Conexão</em></h2>
+                        <p class="reveal-text">Quero que, daqui a 10 ou 20 anos, você aperte o play e sinta o mesmo frio
+                            na barriga desse dia. Meu trabalho é guardar o que o tempo levaria.</p>
+                        <div class="signature reveal-text">Lucas Silva</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="container">
+                <h2 class="section-title center reveal-text">Portfólio <em>Selecionado</em></h2>
+
+                <div class="portfolio-filters reveal-text">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="wedding">Casamentos</button>
+                    <button class="filter-btn" data-filter="prewedding">Formaturas</button>
+                    <button class="filter-btn" data-filter="elopement">Eventos</button>
+
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Casamentos -->
+                    <div class="portfolio-item wedding reveal-image">
+                        <img src="casamento1.JPG" alt="Casamento">
+                        <div class="portfolio-overlay">
+                            <h3>Greice & Felipe</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="Casamentovideo1.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>Dani & Julia</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <img src="4.jpg" alt="Casamento">
+                        <div class="portfolio-overlay">
+                            <h3>Dani & Julia</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <img src="casamento2.JPG" alt="Casamento">
+                        <div class="portfolio-overlay">
+                            <h3>Nikolas & Leticia</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="videocasamento2.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>Amanda & Miguel</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <img src="casamento3.JPG" alt="Casamento">
+                        <div class="portfolio-overlay">
+                            <h3>Nikolas & Leticia</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+
+                    <!-- Formaturas (former prewedding) -->
+                    <div class="portfolio-item prewedding reveal-image">
+                        <img src="fomartura1.JPG" alt="Formatura">
+                        <div class="portfolio-overlay">
+                            <h3>Dhenifer</h3>
+                            <p>Bio Medicina 2025</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item prewedding reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="formaturavideo.MP4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>Dhenifer</h3>
+                            <p>Formatura</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item prewedding reveal-image">
+                        <img src="formatura3.jpg" alt="Formatura">
+                        <div class="portfolio-overlay">
+                            <h3>Amanda</h3>
+                            <p>Engenharia 2025</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item prewedding reveal-image">
+                        <img src="formatura4.jpg" alt="Formatura">
+                        <div class="portfolio-overlay">
+                            <h3>Bruna</h3>
+                            <p>Medicina 2025</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item prewedding reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="VIDEOFORMATURA2.MP4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>Carolina</h3>
+                            <p>Engenharia 2025</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item prewedding reveal-image">
+                        <img src="formatura6.jpg" alt="Formatura">
+                        <div class="portfolio-overlay">
+                            <h3>Roberta</h3>
+                            <p>Medicina 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Eventos (former elopement) -->
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="evento1.JPG" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>Drinks</h3>
+                            <p>Boutique ||</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="eventos1.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>GPTW 2025</h3>
+                            <p>Corporativo</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="eventos3.JPG" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>FOOD</h3>
+                            <p>PHOTO</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="evento5.jpg" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>ANÚNCIO</h3>
+                            <p>Corporativo</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="evento3.MP4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-overlay">
+                            <h3>Capital do Livro</h3>
+                            <p>ANÚNCIO</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="eventos6.JPG" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>Apresentação</h3>
+                            <p>Gramado</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="xis.jpeg" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>ANÚNCIO</h3>
+                            <p>Corporativo</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="rest.jpeg" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>ANÚNCIO</h3>
+                            <p>Corporativo</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="bebida.jpeg" alt="Evento">
+                        <div class="portfolio-overlay">
+                            <h3>Apresentação</h3>
+                            <p>Corporativo</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="experience-content">
+                    <h2 class="section-title reveal-text">O segredo por trás de cada <em>Cena</em></h2>
+                    <div class="cards-grid">
+                        <div class="card reveal-text">
+                            <i class="fa-solid fa-camera-retro"></i>
+                            <h3>Gravação</h3>
+                            <p>Luz natural e composição que valorizam a beleza real do momento. Nada forçado, tudo
+                                verdadeiro.</p>
+                        </div>
+                        <div class="card reveal-text">
+                            <i class="fa-regular fa-heart"></i>
+                            <h3>Direção Leve</h3>
+                            <p>Esqueça as poses. Eu guio vocês para que seja divertido e espontâneo. Vocês curtem,
+                                eu gravo.</p>
+                        </div>
+                        <div class="card reveal-text">
+                            <i class="fa-solid fa-gem"></i>
+                            <h3>Edição</h3>
+                            <p>Cor, som e ritmo pensados para emocionar. Um filme feito sob medida para a sua história.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title center reveal-text">Histórias <em>Reais</em></h2>
+
+                <div class="testimonials-slider reveal-text">
+                    <div class="testimonial-slide active">
+                        <p class="testimonial-text">"O Lucas não é apenas um videomaker, ele é um artista. Os vídeos
+                            ficaram incríveis, mas o que mais nos impressionou foi como ele nos deixou à vontade. Rever
+                            os
+                            videos é reviver cada momento que ficará pra sempre."</p>
+                        <div class="testimonial-author">
+                            <h4>Greice Felipe</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"Simplesmente perfeito! Cada detalhe foi capturado com tanta
+                            sensibilidade. Olhamos os videos e conseguimos ouvir a música e sentir o cheiro das flores
+                            novamente. Obrigada por tudo!"</p>
+                        <div class="testimonial-author">
+                            <h4>Gabi e Bruna</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"Escolher o Lucas foi a melhor decisão do nosso casamento.
+                            Profissionalismo impecável, equipe dedicada, time incrivel!!"</p>
+                        <div class="testimonial-author">
+                            <h4>Patrícia & André</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="reveal-text">Vamos contar a sua <em>história</em>?</h2>
+                <a href="#contact" class="btn-outline reveal-text">Bora conversar?</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal-text">
+                        <h2 class="section-title">Entre em <em>Contato</em></h2>
+                        <p>Estou ansioso para conhecer sua história. Preencha o formulário ou me chame nas redes
+                            sociais.</p>
+
+                        <div class="contact-methods">
+                            <div class="method">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>(51) 98911-8543</span>
+                            </div>
+                            <div class="method">
+                                <i class="fa-regular fa-envelope"></i>
+                                <span>dr.lucas25@gmail.com</span>
+                            </div>
+                            <div class="method">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>@lucas.filmmakeer</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/lucas.filmakeer/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form reveal-text" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="date" placeholder="Data">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="location" placeholder="Local">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Mensagem..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 LucasFilmMaker. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5551989118543?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais."
+        class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Matter.js (Disabled) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
+    <!-- Hero Physics Animation (Disabled) -->
+    <!-- <script src="js/hero-physics.js"></script> -->
+    <!-- App Script -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
