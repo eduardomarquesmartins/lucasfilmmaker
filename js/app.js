@@ -49,16 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navLinks.classList.toggle('nav-active');
             hamburger.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
     }
 
     // Close menu when a link is clicked
     links.forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            navLinks.classList.remove('nav-active');
             hamburger.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
     });
 

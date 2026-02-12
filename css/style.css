@@ -726,6 +726,8 @@ main {
 
     .hamburger {
         display: flex;
+        z-index: 2000;
+        /* Above nav-links */
     }
 
     .hero-title {
