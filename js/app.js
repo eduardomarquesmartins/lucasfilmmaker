@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('preloader-active');
 
     const startHeroAnimations = () => {
+        const heroVideo = document.querySelector('.hero-bg-video');
+        if (heroVideo) heroVideo.play();
+
         const heroTl = gsap.timeline();
         heroTl.to('.hero-content', {
             opacity: 1,
