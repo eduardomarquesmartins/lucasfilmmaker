@@ -42,6 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Hamburger Menu ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
+
+    // Close menu when a link is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
     // --- Generic Reveal Animation ---
     gsap.utils.toArray('.reveal-text').forEach(element => {
         gsap.from(element, {
