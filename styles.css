@@ -388,8 +388,8 @@ video {
 
 .concept-grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    /* Image slightly smaller than text area */
+    grid-template-columns: 0.8fr 1.2fr;
+    /* Image smaller than text area */
     align-items: center;
     height: 100%;
 }
