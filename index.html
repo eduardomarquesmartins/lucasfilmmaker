@@ -25,7 +25,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="no-scroll">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <div class="preloader-text">
+                <h2 class="loader-logo">LUCASFILMMAKER</h2>
+                <span class="loader-sub">VIDEOMAKER</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -50,7 +60,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <!-- Video Background -->
-            <video autoplay muted loop playsinline class="hero-bg-video">
+            <video autoplay muted loop playsinline class="hero-bg-video" id="hero-video">
                 <source src="assets/videos/wedding-highlight-reel.mp4" type="video/mp4">
             </video>
 

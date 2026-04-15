@@ -18,6 +18,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Preloader Logic ---
+    const preloader = document.getElementById('preloader');
+    const heroVideo = document.getElementById('hero-video');
+
+    const hidePreloader = () => {
+        if (!preloader.classList.contains('preloader-hidden')) {
+            preloader.classList.add('preloader-hidden');
+
+            gsap.to(preloader, {
+                opacity: 0,
+                scale: 1.1,
+                duration: 1.2,
+                ease: 'power3.inOut',
+                onComplete: () => {
+                    preloader.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                    
+                    // Trigger entrance animations for hero content
+                    gsap.from('.hero-title', {
+                        y: 50,
+                        opacity: 0,
+                        duration: 1.5,
+                        ease: 'power4.out',
+                        delay: 0.2
+                    });
+                }
+            });
+        }
+    };
+
+    if (heroVideo) {
+        // If video is already loaded
+        if (heroVideo.readyState >= 3) {
+            setTimeout(hidePreloader, 500);
+        } else {
+            heroVideo.addEventListener('canplaythrough', () => {
+                setTimeout(hidePreloader, 500);
+            });
+        }
+    }
+
+    // Fallback: hide preloader after 5 seconds anyway
+    setTimeout(hidePreloader, 5000);
+
     // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
     const hamburger = document.querySelector('.hamburger');
