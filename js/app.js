@@ -1,3 +1,18 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  projectId: "comentarios-lucasfilmmaker",
+  appId: "1:216848198050:web:f967b2e37b2aec4c94aafb",
+  storageBucket: "comentarios-lucasfilmmaker.firebasestorage.app",
+  apiKey: "AIzaSyA0gNr6mFKvHOmBq5OMss87SRymn4fLRho",
+  authDomain: "comentarios-lucasfilmmaker.firebaseapp.com",
+  messagingSenderId: "216848198050"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 // Initialize GSAP
 gsap.registerPlugin(ScrollTrigger);
 
@@ -219,11 +234,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const commentsList = document.getElementById('commentsList');
 
     if (commentForm && commentsList) {
-        // Load existing comments from localStorage
-        const loadComments = () => {
-            const comments = JSON.parse(localStorage.getItem('weddingComments')) || [];
-            commentsList.innerHTML = '';
+        const commentsRef = collection(db, 'comments');
+        const q = query(commentsRef, orderBy('createdAt', 'desc'));
 
+        // Realtime listener
+        onSnapshot(q, (snapshot) => {
+            const comments = [];
+            snapshot.forEach((doc) => {
+                comments.push({ id: doc.id, ...doc.data() });
+            });
+
+            commentsList.innerHTML = '';
             if (comments.length === 0) {
                 commentsList.innerHTML = '<p style="text-align:center; color:var(--text-muted); font-size:0.9rem;">Seja o primeiro a deixar uma mensagem!</p>';
             } else {
@@ -235,20 +256,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="comment-date">${comment.date}</span>
                         <p class="comment-body">${comment.text}</p>
                     `;
-                    // Prepend so newest is on top if we append in order, but we unshift in insertion, so append here
+                    // comments are ordered desc by createdAt
                     commentsList.appendChild(commentEl);
                 });
             }
             
             // Refresh scroll triggers since elements changed height
             setTimeout(() => { ScrollTrigger.refresh(); }, 100);
-        };
-
-        // Load initial comments
-        loadComments();
+        });
 
         // Submit comment
-        commentForm.addEventListener('submit', (e) => {
+        commentForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const name = document.getElementById('commentName').value;
@@ -256,22 +274,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (!name || !text) return;
             
-            const newComment = {
-                id: Date.now(),
-                name: name,
-                text: text,
-                date: new Date().toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })
-            };
+            const btn = commentForm.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
             
-            const comments = JSON.parse(localStorage.getItem('weddingComments')) || [];
-            comments.unshift(newComment);
-            
-            localStorage.setItem('weddingComments', JSON.stringify(comments));
-            
-            document.getElementById('commentName').value = '';
-            document.getElementById('commentText').value = '';
-            
-            loadComments();
+            try {
+                await addDoc(commentsRef, {
+                    name: name,
+                    text: text,
+                    date: new Date().toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' }),
+                    createdAt: Date.now()
+                });
+                
+                document.getElementById('commentName').value = '';
+                document.getElementById('commentText').value = '';
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                alert("Erro ao salvar mensagem no banco de dados.");
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
         });
     }
 
