@@ -1337,6 +1337,7 @@ video {
     background: var(--gold);
     color: var(--charcoal);
     transform: translate(-50%, -50%) scale(1.1);
+}
 
 /* 12. PRELOADER */
 #preloader {
@@ -1402,4 +1403,4 @@ video {
 .no-scroll {
     overflow: hidden !important;
     height: 100vh;
-}
+}  
