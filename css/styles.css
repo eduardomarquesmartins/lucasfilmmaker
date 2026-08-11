@@ -153,6 +153,43 @@ video {
     font-size: 1.1rem;
 }
 
+.logo .fa-camera {
+    position: relative;
+    animation: camera-shutter 4.5s ease-in-out infinite;
+}
+
+.logo .fa-camera::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 58%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #fff9dc;
+    opacity: 0;
+    animation: camera-flash 4.5s ease-in-out infinite;
+}
+
+@keyframes camera-shutter {
+    0%, 92%, 100% { transform: translateY(0) rotate(0); }
+    94% { transform: translateY(-2px) rotate(-5deg) scale(1.08); }
+    96% { transform: translateY(1px) rotate(3deg) scale(0.96); }
+}
+
+@keyframes camera-flash {
+    0%, 92%, 100% { opacity: 0; box-shadow: 0 0 0 0 rgba(255, 249, 220, 0); }
+    94% { opacity: 1; box-shadow: 0 0 12px 8px rgba(255, 249, 220, 0.95); }
+    96% { opacity: 0; box-shadow: 0 0 20px 14px rgba(255, 249, 220, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo .fa-camera,
+    .logo .fa-camera::after {
+        animation: none;
+    }
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -852,12 +889,17 @@ main > footer {
 /* Em cada categoria, os vídeos aparecem antes das fotos. */
 .portfolio-item:has(video) {
     order: -1;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     align-self: start;
 }
 
 .portfolio-item:has(video) video {
     object-fit: cover;
+}
+
+/* Vídeos verticais preservam o enquadramento de Reels e Stories. */
+.portfolio-item.video-vertical {
+    aspect-ratio: 9 / 16;
 }
 
 .portfolio-item:hover img,
