@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroVideo.readyState >= 3) {
             setTimeout(hidePreloader, 500);
         } else {
-            heroVideo.addEventListener('canplaythrough', () => {
+            heroVideo.addEventListener('canplay', () => {
                 setTimeout(hidePreloader, 500);
             });
         }
@@ -103,6 +103,33 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out',
         delay: 0.5
     });
+
+    // Carrega previews de vídeo somente perto da área visível. Assim, o
+    // portfólio não baixa centenas de megabytes logo na abertura da página.
+    const deferredVideos = document.querySelectorAll('video source[data-src]');
+    const loadVideo = (source) => {
+        const video = source.closest('video');
+        if (video.dataset.loaded) return;
+
+        video.dataset.loaded = 'true';
+        video.src = source.dataset.src;
+        video.load();
+        video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
+    };
+
+    if ('IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                loadVideo(entry.target);
+                observer.unobserve(entry.target.closest('video'));
+            });
+        }, { rootMargin: '300px 0px' });
+
+        deferredVideos.forEach((source) => videoObserver.observe(source.closest('video')));
+    } else {
+        deferredVideos.forEach(loadVideo);
+    }
 
     // --- Generic Reveal Animation ---
     gsap.utils.toArray('.reveal-text').forEach(element => {
@@ -354,13 +381,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const portfolioItem = video.closest('.portfolio-item');
 
         portfolioItem.addEventListener('click', () => {
-            const videoSrc = video.querySelector('source').src;
+            const source = video.querySelector('source');
+            const videoSrc = source.dataset.src || video.currentSrc || video.src;
             modalVideo.src = videoSrc;
+            modalVideo.load();
             videoModal.style.display = 'flex';
             setTimeout(() => {
                 videoModal.classList.add('active');
             }, 10);
-            modalVideo.play();
+            modalVideo.addEventListener('canplay', () => modalVideo.play().catch(() => {}), { once: true });
             document.body.style.overflow = 'hidden'; // Prevent scroll
         });
     });

@@ -43,7 +43,7 @@
             <a href="#" class="logo"><i class="fa-solid fa-camera"></i> LucasFilmMaker</a>
             <ul class="nav-links">
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Especialidades</a></li>
+                <li><a href="#events-services">Especialidades</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
 
                 <li><a href="#contact" class="btn-primary">Contato</a></li>
@@ -60,7 +60,7 @@
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <!-- Video Background -->
-            <video autoplay muted loop playsinline class="hero-bg-video" id="hero-video">
+            <video autoplay muted loop playsinline poster="assets/images/posters/wedding-highlight-reel.webp" class="hero-bg-video" id="hero-video">
                 <source src="assets/videos/wedding-highlight-reel.mp4" type="video/mp4">
             </video>
 
@@ -90,7 +90,7 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image reveal-image">
-                        <img src="assets/images/profile-lucas-silva.jpg" alt="Fotógrafo Profissional">
+                        <img src="assets/images/profile-lucas-silva.webp" alt="Fotógrafo Profissional" loading="lazy" decoding="async">
                     </div>
                     <div class="about-content">
                         <h2 class="section-title reveal-text">Cada take, Um Filme <em>Único</em></h2>
@@ -115,6 +115,54 @@
                 <div class="comments-container reveal-text">
                     <div class="comments-list" id="commentsList">
                         <!-- Comments will be inserted here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Services Section -->
+        <section id="events-services" class="section services-section events-services-section">
+            <div class="container">
+                <h2 class="section-title center events-section-title reveal-text">O que <em>fazemos?</em></h2>
+                <div class="services-grid">
+                    <div class="services-list">
+                        <div class="service-item reveal-text">
+                            <span class="service-number">01</span>
+                            <div class="service-info">
+                                <h3>Eventos Corporativos</h3>
+                                <p>Cobertura estratégica para convenções, lançamentos, palestras e experiências de marca.</p>
+                                <span class="service-arrow">→</span>
+                            </div>
+                        </div>
+                        <div class="service-item reveal-text">
+                            <span class="service-number">02</span>
+                            <div class="service-info">
+                                <h3>Reels para Eventos</h3>
+                                <p>Conteúdo ágil e envolvente para transformar os melhores momentos em alcance nas redes.</p>
+                                <span class="service-arrow">→</span>
+                            </div>
+                        </div>
+                        <div class="service-item reveal-text">
+                            <span class="service-number">03</span>
+                            <div class="service-info">
+                                <h3>Aftermovie</h3>
+                                <p>Um filme dinâmico que reúne a energia, as conexões e os detalhes que marcaram o evento.</p>
+                                <span class="service-arrow">→</span>
+                            </div>
+                        </div>
+                        <div class="service-item reveal-text">
+                            <span class="service-number">04</span>
+                            <div class="service-info">
+                                <h3>Gastronomia & Marca</h3>
+                                <p>Imagens de impacto para restaurantes, experiências gastronômicas e campanhas comerciais.</p>
+                                <span class="service-arrow">→</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-arch-wrap reveal-image">
+                        <div class="arch-container">
+                            <img src="assets/images/event-boutique-drinks.webp" alt="Cobertura de eventos" loading="lazy" decoding="async">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,7 +212,7 @@
                     </div>
                     <div class="services-arch-wrap reveal-image">
                         <div class="arch-container">
-                            <img src="assets/images/wedding-greice-felipe.jpg" alt="Serviços Cinematográficos">
+                            <img src="assets/images/wedding-greice-felipe.webp" alt="Serviços Cinematográficos" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -175,7 +223,7 @@
             <div class="container-full">
                 <div class="concept-grid">
                     <div class="concept-image reveal-image">
-                        <img src="assets/images/servicos.jpg" alt="Pre Wedding Concept">
+                        <img src="assets/images/servicos.webp" alt="Pre Wedding Concept" loading="lazy" decoding="async">
                     </div>
                     <div class="concept-content reveal-text">
                         <span class="concept-tag">Entenda o Conceito</span>
@@ -247,7 +295,7 @@
                         <a href="#contact" class="btn-outline">Quero meu Same Day Edit</a>
                     </div>
                     <div class="sde-video reveal-image">
-                        <video autoplay muted loop playsinline class="sde-bg-video">
+                        <video autoplay muted loop playsinline preload="metadata" poster="assets/images/same-day-edit-poster.webp" class="sde-bg-video">
                             <source src="assets/videos/samy.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -269,9 +317,19 @@
 
                 <div class="portfolio-grid">
                     <!-- 6 Primeiros Cards: Vídeos -->
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/video-99-portugues.webp">
+                            <source data-src="assets/videos/video-99-portugues.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>99 Português</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/wedding-highlight-reel.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/wedding-highlight-reel.webp">
+                            <source data-src="assets/videos/wedding-highlight-reel.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -280,8 +338,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/cinemact.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/cinemact.webp">
+                            <source data-src="assets/videos/cinemact.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -290,8 +348,28 @@
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/duda-gabriel.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/clip-1.webp">
+                            <source data-src="assets/videos/clip-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Novo Vídeo 1</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/clip-2.webp">
+                            <source data-src="assets/videos/clip-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Novo Vídeo 2</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item wedding reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/duda-gabriel.webp">
+                            <source data-src="assets/videos/duda-gabriel.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -300,10 +378,29 @@
                         </div>
                     </div>
 
-                    <!-- Novos Vídeos -->
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/video-previa.webp">
+                            <source data-src="assets/videos/video-previa.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Prévia</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/construsul.webp">
+                            <source data-src="assets/videos/construsul.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Prévia 2</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/casamento-gabriel-duda.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/casamento-gabriel-duda.webp">
+                            <source data-src="assets/videos/casamento-gabriel-duda.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -312,8 +409,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/teaser-samy-joao.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/teaser-samy-joao.webp">
+                            <source data-src="assets/videos/teaser-samy-joao.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -322,8 +419,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/cinematic-moment.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/cinematic-moment.webp">
+                            <source data-src="assets/videos/cinematic-moment.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -332,8 +429,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/wedding-amanda-miguel.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/wedding-amanda-miguel.webp">
+                            <source data-src="assets/videos/wedding-amanda-miguel.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -342,9 +439,9 @@
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/cinematic-teaser.webp">
                             <source
-                                src="assets/videos/cinematic-teaser.mp4"
+                                data-src="assets/videos/cinematic-teaser.mp4"
                                 type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
@@ -354,8 +451,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/event-gptw-2025.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/event-gptw-2025.webp">
+                            <source data-src="assets/videos/event-gptw-2025.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -366,57 +463,67 @@
 
 
                     <!-- Cards de Fotos a seguir -->
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/reels1.webp">
+                            <source data-src="assets/videos/reels1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Reels</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <img src="assets/images/wedding-greice-felipe.jpg" alt="Casamento">
+                        <img src="assets/images/wedding-greice-felipe.webp" alt="Casamento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Greice & Felipe</h3>
                             <p>Casamento</p>
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <img src="assets/images/wedding-dani-julia.jpg" alt="Casamento">
+                        <img src="assets/images/wedding-dani-julia.webp" alt="Casamento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Dani & Julia</h3>
                             <p>Casamento</p>
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <img src="assets/images/wedding-nikolas-leticia-1.jpg" alt="Casamento">
+                        <img src="assets/images/wedding-nikolas-leticia-1.webp" alt="Casamento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Nikolas & Leticia</h3>
                             <p>Casamento</p>
                         </div>
                     </div>
                     <div class="portfolio-item wedding reveal-image">
-                        <img src="assets/images/wedding-nikolas-leticia-2.jpg" alt="Casamento">
+                        <img src="assets/images/wedding-nikolas-leticia-2.webp" alt="Casamento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Nikolas & Leticia</h3>
                             <p>Casamento</p>
                         </div>
                     </div>
                     <div class="portfolio-item prewedding reveal-image">
-                        <img src="assets/images/graduation-dhenifer-photo.jpg" alt="Formatura">
+                        <img src="assets/images/graduation-dhenifer-photo.webp" alt="Formatura" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Dhenifer</h3>
                             <p>Bio Medicina 2025</p>
                         </div>
                     </div>
                     <div class="portfolio-item prewedding reveal-image">
-                        <img src="assets/images/graduation-amanda.jpg" alt="Formatura">
+                        <img src="assets/images/graduation-amanda.webp" alt="Formatura" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Amanda</h3>
                             <p>Formatura 2024</p>
                         </div>
                     </div>
                     <div class="portfolio-item prewedding reveal-image">
-                        <img src="assets/images/graduation-bruna.jpg" alt="Formatura">
+                        <img src="assets/images/graduation-bruna.webp" alt="Formatura" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Bruna</h3>
                             <p>Direito 2024</p>
                         </div>
                     </div>
                     <div class="portfolio-item prewedding reveal-image">
-                        <img src="assets/images/graduation-roberta.jpg" alt="Formatura">
+                        <img src="assets/images/graduation-roberta.webp" alt="Formatura" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Roberta</h3>
                             <p>Medicina 2025</p>
@@ -425,36 +532,92 @@
 
                     <!-- Eventos (former elopement) -->
                     <div class="portfolio-item elopement reveal-image">
-                        <img src="assets/images/event-boutique-drinks.jpg" alt="Evento">
+                        <img src="assets/images/event-boutique-drinks.webp" alt="Evento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Drinks</h3>
                             <p>Boutique ||</p>
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <img src="assets/images/event-presentation-gramado.jpg" alt="Evento">
+                        <img src="assets/images/event-presentation-gramado.webp" alt="Evento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>Apresentação</h3>
                             <p>Gramado</p>
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <img src="assets/images/event-food-photography.jpg" alt="Evento">
+                        <img src="assets/images/event-food-photography.webp" alt="Evento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>FOOD</h3>
                             <p>PHOTO</p>
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <img src="assets/images/event-corporate-ad.jpg" alt="Evento">
+                        <img src="assets/images/food-01.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-02.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-03.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-04.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-05.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-06.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Gastronomia</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-07.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Drinks</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/food-08.webp" alt="Fotografia gastronômica" loading="lazy" decoding="async">
+                        <div class="portfolio-overlay">
+                            <h3>Drinks</h3>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <img src="assets/images/event-corporate-ad.webp" alt="Evento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>ANÚNCIO</h3>
                             <p>Corporativo</p>
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/event-book-capital.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/event-book-capital.webp">
+                            <source data-src="assets/videos/event-book-capital.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -463,8 +626,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item prewedding reveal-image">
-                        <video autoplay muted loop playsinline>
-                            <source src="assets/videos/graduation-dhenifer.mp4" type="video/mp4">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/graduation-dhenifer.webp">
+                            <source data-src="assets/videos/graduation-dhenifer.mp4" type="video/mp4">
                         </video>
                         <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
                         <div class="portfolio-overlay">
@@ -473,9 +636,19 @@
                         </div>
                     </div>
                     <div class="portfolio-item elopement reveal-image">
-                        <img src="assets/images/wedding-andre-aline.jpg" alt="Evento">
+                        <img src="assets/images/wedding-andre-aline.webp" alt="Evento" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <h3>André & Aline</h3>
+                            <p>Casamento</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item elopement reveal-image">
+                        <video autoplay muted loop playsinline preload="none" poster="assets/images/posters/clip-3.webp">
+                            <source data-src="assets/videos/clip-3.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-icon-overlay"><i class="fa-solid fa-play"></i></div>
+                        <div class="portfolio-overlay">
+                            <h3>Novo Vídeo 3</h3>
                             <p>Casamento</p>
                         </div>
                     </div>
@@ -644,4 +817,3 @@
 
 
 </html>
-

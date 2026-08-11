@@ -4,7 +4,12 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "assets/images/*.jpg",
+      "assets/images/*.jpeg",
+      "assets/images/*.JPG",
+      "assets/images/*.PNG",
+      "assets/images/*.ARW"
     ]
   },
   "firestore": {
