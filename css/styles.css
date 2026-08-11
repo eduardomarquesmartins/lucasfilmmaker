@@ -32,6 +32,28 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Deixa o portfólio logo após a apresentação principal. */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    order: 1;
+}
+
+.portfolio-section {
+    order: 2;
+}
+
+main > section:not(.hero-section):not(.portfolio-section) {
+    order: 3;
+}
+
+main > footer {
+    order: 4;
+}
+
 /* Global Font Weight Override */
 h1,
 h2,
@@ -444,6 +466,58 @@ video {
     transform: scale(1.1);
 }
 
+/* A seção de Eventos usa uma imagem quadrada, sem o arco dos casamentos. */
+.events-services-section .arch-container {
+    aspect-ratio: 2 / 3;
+    max-height: none;
+    border-radius: 4px;
+}
+
+.events-services-section .arch-container img {
+    object-fit: cover;
+}
+
+.events-services-section .services-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.events-section-title {
+    margin-bottom: 4rem;
+}
+
+.events-services-section .services-arch-wrap {
+    order: 1;
+}
+
+.events-services-section .services-list {
+    order: 2;
+}
+
+/* Eventos entra logo após as especialidades de casamento. */
+.events-services-section {
+    order: 4;
+}
+
+#concept,
+#sde,
+#testimonials,
+.cta-section {
+    order: 5;
+}
+
+#recent-comments {
+    order: 6;
+}
+
+#leave-comment,
+#contact {
+    order: 7;
+}
+
+main > footer {
+    order: 8;
+}
+
 /* 4.6 CONCEPT SECTION */
 .concept-section {
     padding: 0;
@@ -614,7 +688,7 @@ video {
     max-width: 100%;
     max-height: 80vh;
     /* Limit height */
-    object-fit: contain;
+    object-fit: cover;
     /* Don't crop, show full video */
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
@@ -773,6 +847,17 @@ video {
     display: block;
     transition: var(--transition);
     background: #000;
+}
+
+/* Em cada categoria, os vídeos aparecem antes das fotos. */
+.portfolio-item:has(video) {
+    order: -1;
+    aspect-ratio: 4 / 3;
+    align-self: start;
+}
+
+.portfolio-item:has(video) video {
+    object-fit: cover;
 }
 
 .portfolio-item:hover img,
@@ -1331,7 +1416,7 @@ video {
     color: var(--gold);
     font-size: 1.5rem;
     z-index: 5;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     pointer-events: none;
 }
@@ -1432,4 +1517,4 @@ video {
 .no-scroll {
     overflow: hidden !important;
     height: 100vh;
-}  
+}
