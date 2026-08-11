@@ -1197,6 +1197,41 @@ main > footer {
         transform: translateX(-50%) scale(0.85);
         /* Slightly smaller */
     }
+
+    .events-services-section .services-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .events-services-section .services-arch-wrap {
+        order: 1;
+    }
+
+    .events-services-section .services-list {
+        order: 2;
+    }
+
+    .events-services-section .arch-container {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-filters {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+        font-size: clamp(0.52rem, 2.4vw, 0.65rem);
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
 }
 
 /* Hamburger Animation */
