@@ -389,6 +389,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 videoModal.classList.add('active');
             }, 10);
+            if (modalVideo.requestFullscreen) {
+                modalVideo.requestFullscreen().catch(() => {});
+            } else if (modalVideo.webkitEnterFullscreen) {
+                modalVideo.webkitEnterFullscreen();
+            }
             modalVideo.addEventListener('canplay', () => modalVideo.play().catch(() => {}), { once: true });
             document.body.style.overflow = 'hidden'; // Prevent scroll
         });
